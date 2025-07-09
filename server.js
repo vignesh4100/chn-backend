@@ -31,7 +31,7 @@ app.post('/api/contact', async (req, res) => {
 
   const mailOptions = {
     from: `"${fullName}" <${process.env.SMTP_USER}>`,
-    to: 'info@chnindia.com',
+    to: 'vigneshvv293269@gmail.com',
     subject: `New Contact - ${subject}`,
     html: `
       <h2>Contact Request</h2>
