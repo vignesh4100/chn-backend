@@ -31,7 +31,7 @@ app.post('/api/contact', async (req, res) => {
 
   const mailOptions = {
     from: `"${fullName}" <${process.env.SMTP_USER}>`,
-    to: 'vigneshvv293269@gmail.com',
+    to: 'info@chnindia.com',
     subject: `New Contact - ${subject}`,
     html: `
       <h2>Contact Request</h2>
@@ -72,7 +72,7 @@ app.post('/api/career', async (req, res) => {
 
   const mailOptions = {
     from: `"${fullName}" <${process.env.SMTP_USER}>`,
-    to: 'vigneshvv293269@gmail.com',
+    to: 'info@chnindia.com',
     subject: `New Career Application - ${position}`,
     html: `
       <h2>New Career Application</h2>
