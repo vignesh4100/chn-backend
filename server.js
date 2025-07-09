@@ -96,3 +96,7 @@ app.post('/api/career', async (req, res) => {
     res.status(500).json({ message: 'Failed to send career email' });
   }
 });
+
+app.listen(process.env.PORT, () => {
+  console.log(`Server is running on port ${process.env.PORT}`);
+});
