@@ -27,7 +27,7 @@ app.post('/api/contact', async (req, res) => {
 
   const mailOptions = {
     from: `"${fullName}" <${process.env.SMTP_USER}>`,
-    to: process.env.RECEIVER_EMAIL,
+    to: 'vigneshvv293269@gmail.com',
     subject: `New Contact - ${subject}`,
     html: `
       <h2>Contact Request</h2>
@@ -68,7 +68,7 @@ app.post('/api/career', async (req, res) => {
 
   const mailOptions = {
     from: `"${fullName}" <${process.env.SMTP_USER}>`,
-    to: process.env.RECEIVER_EMAIL,
+    to: 'vigneshvv293269@gmail.com',
     subject: `New Career Application - ${position}`,
     html: `
       <h2>New Career Application</h2>
@@ -95,8 +95,4 @@ app.post('/api/career', async (req, res) => {
     console.error('Email error:', err);
     res.status(500).json({ message: 'Failed to send career email' });
   }
-});
-
-app.listen(process.env.PORT, () => {
-  console.log(`Server is running on port ${process.env.PORT}`);
 });
