@@ -7,11 +7,17 @@ const { Resend } = require('resend');
 dotenv.config();
 const app = express();
 
-app.use(cors({
+const corsOptions = {
   origin: ['http://localhost:5174', 'https://chnindia.in'],
-  methods: ['GET', 'POST'],
+  methods: ['GET', 'POST', 'OPTIONS'],
   allowedHeaders: ['Content-Type'],
-}));
+  credentials: true,
+};
+
+app.use(cors(corsOptions));
+
+// 👇 explicitly handle OPTIONS requests
+app.options('*', cors(corsOptions));
 
 app.use(express.json({ limit: '10mb' }));
 
